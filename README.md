@@ -2,8 +2,7 @@
 
 > Note: This will only work on localhost. You will not be able to deploy this code on Google App Engine.
 
-If you can't get GAE to run on your computer, you can still use the webapp2 Python framework without GAE. This is a 
-step-by-step tutorial on how to do it.
+If you can't get GAE to run on your computer, you can still use the webapp2 Python framework without GAE. This is a step-by-step tutorial on how to do it.
 
 ### Step 1: Create new PyCharm project
 
@@ -19,14 +18,13 @@ In the next step define the project path and optionally create a virtual environ
 
 ### Step 3: Install PIP libraries
 
-Now that you've started a new project, open the Terminal tab (below) and install three PIP libraries with the following commands:
+Now that you've started a new project, open the Terminal tab (below) and install **three** PIP libraries with the following commands:
 
 - `pip install WebOb`
 - `pip install Paste`
 - `pip install webapp2`
 
-`webapp2` is the Python framework we'll use and it needs WebOb in order to work correctly. `Paste` is a HTTP server 
-that we'll use to run our website on our computer.
+`webapp2` is the Python framework we'll use and it needs `WebOb` in order to work correctly. `Paste` is a HTTP server that we'll use to run our website on our computer.
 
 ![Install libraries via PIP](https://storage.googleapis.com/smartninja/install-pip-libs-1543538743.png)
 
@@ -62,7 +60,7 @@ Then add the following code in it:
 
 ### Step 5: Run your web app
 
-Now you can finally run your new web app! Right-click on main.py and select `Run 'main'`.
+Now you can finally run your new web app! Right-click on `main.py` and select **Run 'main'**.
 
 ![Run main.py](https://storage.googleapis.com/smartninja/run-main-pycharm-1543538963.png)
 

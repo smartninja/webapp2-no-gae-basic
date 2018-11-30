@@ -1,4 +1,5 @@
 import webapp2
+from paste import httpserver
 
 
 # handlers
@@ -15,7 +16,6 @@ app = webapp2.WSGIApplication([
 
 # run the server
 def main():
-    from paste import httpserver
     httpserver.serve(app, host='127.0.0.1', port='8080')
 
 

@@ -34,29 +34,31 @@ Create a file called `main.py` in the root of your project.
 
 Then add the following code in it:
 
-	import webapp2
+``` python
+import webapp2
+from paste import httpserver
 
 
-	# handlers
-	class MainHandler(webapp2.RequestHandler):
-	    def get(self):
-	        return self.response.write('Hello, SmartNinja!')
+# handlers
+class MainHandler(webapp2.RequestHandler):
+    def get(self):
+        return self.response.write('Hello, SmartNinja!')
 	
 	
-	# URLs
-	app = webapp2.WSGIApplication([
-	    webapp2.Route('/', MainHandler),
-	], debug=True)
+# URLs
+app = webapp2.WSGIApplication([
+    webapp2.Route('/', MainHandler),
+], debug=True)
 	
 	
-	# run the server
-	def main():
-	    from paste import httpserver
-	    httpserver.serve(app, host='127.0.0.1', port='8080')
+# run the server
+def main():
+    httpserver.serve(app, host='127.0.0.1', port='8080')
 	
 	
-	if __name__ == '__main__':
-	    main()
+if __name__ == '__main__':
+    main()
+```
 
 ### Step 5: Run your web app
 

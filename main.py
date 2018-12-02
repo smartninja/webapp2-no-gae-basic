@@ -1,5 +1,4 @@
 import webapp2
-from paste import httpserver
 
 
 # handlers
@@ -14,10 +13,13 @@ app = webapp2.WSGIApplication([
 ], debug=True)
 
 
-# run the server
-def main():
-    httpserver.serve(app, host='127.0.0.1', port='8080')
+# run the localhost server
+localhost = True  # change to False before deploying to Google Cloud (GAE)
+if localhost:
+    def main():
+        from paste import httpserver
+        httpserver.serve(app, host='localhost', port='8080')
 
 
-if __name__ == '__main__':
-    main()
+    if __name__ == '__main__':
+        main()

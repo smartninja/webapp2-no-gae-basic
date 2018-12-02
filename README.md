@@ -36,7 +36,6 @@ Then add the following code in it:
 
 ``` python
 import webapp2
-from paste import httpserver
 
 
 # handlers
@@ -51,13 +50,16 @@ app = webapp2.WSGIApplication([
 ], debug=True)
 	
 	
-# run the server
-def main():
-    httpserver.serve(app, host='127.0.0.1', port='8080')
-	
-	
-if __name__ == '__main__':
-    main()
+# run the localhost server
+localhost = True  # change to False before deploying to Google Cloud (GAE)
+if localhost:
+    def main():
+        from paste import httpserver
+        httpserver.serve(app, host='localhost', port='8080')
+
+
+    if __name__ == '__main__':
+        main()
 ```
 
 ### Step 5: Run your web app
@@ -68,8 +70,7 @@ Now you can finally run your new web app! Right-click on `main.py` and select **
 
 ### Step 6: See your web app in browser
 
-A new window will open in your PyCharm below. Click on the [http://127.0.0.1:8080](http://127.0.0.1:8080) link and your 
-web app will open in the browser.
+A new window will open in your PyCharm below. Click on the [http://localhost:8080](http://localhost:8080) link and your web app will open in the browser.
 
 ### Step 7: Make some changes
 

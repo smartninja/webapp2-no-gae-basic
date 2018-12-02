@@ -1,8 +1,6 @@
-# How to run webapp2 without GAE
+# How to run webapp2 without Cloud SDK
 
-> Note: This will only work on localhost. You will not be able to deploy this code on Google App Engine.
-
-If you can't get GAE to run on your computer, you can still use the webapp2 Python framework without GAE. This is a step-by-step tutorial on how to do it.
+If you can't get Google Cloud SDK to run on your computer, you can still use the webapp2 Python framework without the Cloud SDK. This is a step-by-step tutorial on how to do it.
 
 ### Step 1: Create new PyCharm project
 
@@ -84,3 +82,7 @@ Click on the green curved arrow to reload `main.py`:
 ### Congrats
 
 That's it! You've successfully set up a localhost web app. :)
+
+### Step 8 (bonus): Deploy to Google Cloud (App Engine)
+
+Even if the Cloud SDK does not work on your computer, you can still deploy this web app on Google Cloud (on Google App Engine). See this tutorial to learn how: [click here](https://github.com/smartninja/webapp2-github-to-gcloud).
